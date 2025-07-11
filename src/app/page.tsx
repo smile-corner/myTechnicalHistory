@@ -1,9 +1,12 @@
 import Link from "next/link";
+import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
+import { projects } from "@/const/projects";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#EAF1EB] to-blue-100">
-      {/* 1️⃣ Hero Section */}
+      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
@@ -21,85 +24,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2️⃣ Projects Section */}
+      {/* Projects Section */}
       <section id="projects" className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           プロジェクト
         </h2>
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Dinner Record */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="md:flex">
-              <div className="md:w-1/3 bg-orange-100 flex items-center justify-center p-8">
-                <span className="text-6xl">🍽</span>
-              </div>
-              <div className="md:w-2/3 p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Dinner Record
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  日々の夕食を簡単に記録・管理できるWebアプリケーション。
-                  シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
-                    Next.js
-                  </span>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
-                    TypeScript
-                  </span>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
-                    Firebase
-                  </span>
-                </div>
-                <Link
-                  href="/projects/dinner-record"
-                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
-                >
-                  詳細を見る →
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* CO₂ Calculator */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="md:flex">
-              <div className="md:w-1/3 bg-green-100 flex items-center justify-center p-8">
-                <span className="text-6xl">🌱</span>
-              </div>
-              <div className="md:w-2/3 p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  CO₂排出量計算アプリ
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  家庭や生活スタイルから、月間のCO₂排出量を簡単に計算できるWebアプリ。
-                  電気・ガス・水道、交通手段、食生活の影響を総合的に計算します。
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                    React 19
-                  </span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                    Next.js 15
-                  </span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                    TypeScript
-                  </span>
-                </div>
-                <Link
-                  href="/projects/co2-calculator"
-                  className="inline-flex items-center text-[#2C5D47] hover:text-green-800 font-medium"
-                >
-                  詳細を見る →
-                </Link>
-              </div>
-            </div>
-          </div>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
         </div>
       </section>
 
-      {/* 3️⃣ About Section */}
+      {/* About Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -136,14 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4️⃣ Footer */}
-      <footer className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-500 text-sm">
-            © 2024 My technical history. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
