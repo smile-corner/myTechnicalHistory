@@ -26,7 +26,43 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           プロジェクト
         </h2>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Dinner Record */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="md:flex">
+              <div className="md:w-1/3 bg-orange-100 flex items-center justify-center p-8">
+                <span className="text-6xl">🍽</span>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Dinner Record
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  日々の夕食を簡単に記録・管理できるWebアプリケーション。
+                  シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
+                    Next.js
+                  </span>
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
+                    TypeScript
+                  </span>
+                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
+                    Firebase
+                  </span>
+                </div>
+                <Link
+                  href="/projects/dinner-record"
+                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
+                >
+                  詳細を見る →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* CO₂ Calculator */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div className="md:flex">
               <div className="md:w-1/3 bg-green-100 flex items-center justify-center p-8">
@@ -34,19 +70,18 @@ export default function Home() {
               </div>
               <div className="md:w-2/3 p-8">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  CO₂ Calculator
+                  CO₂排出量計算アプリ
                 </h3>
                 <p className="text-gray-600 mb-6">
                   家庭や生活スタイルから、月間のCO₂排出量を簡単に計算できるWebアプリ。
-                  自分の生活が環境にどのくらい影響しているかを見える化し、
-                  環境意識の向上とサステナブルな生活の促進を目指しています。
+                  電気・ガス・水道、交通手段、食生活の影響を総合的に計算します。
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                    React
+                    React 19
                   </span>
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                    Next.js
+                    Next.js 15
                   </span>
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
                     TypeScript

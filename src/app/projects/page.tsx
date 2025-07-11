@@ -4,13 +4,23 @@ export default function Projects() {
   const projects = [
     {
       id: "co2-calculator",
-      title: "CO₂計算機",
+      title: "CO₂排出量計算アプリ",
       description:
-        "日常生活での二酸化炭素排出量を計算し、環境への影響を可視化するWebアプリケーション",
-      technologies: ["React", "Next.js", "TypeScript"],
+        "家庭や生活スタイルから、月間のCO₂排出量を簡単に計算できるWebアプリ。電気・ガス・水道、交通手段、食生活の影響を総合的に計算します。",
+      technologies: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
       category: "環境技術",
       image: "🌱",
-      status: "開発中",
+      status: "完了",
+    },
+    {
+      id: "dinner-record",
+      title: "Dinner Record",
+      description:
+        "日々の夕食を簡単に記録・管理できるWebアプリケーション。シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+      category: "Webアプリ",
+      image: "🍽",
+      status: "完了",
     },
   ];
 
