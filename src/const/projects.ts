@@ -23,4 +23,25 @@ export const projects = [
     linkColor: "text-orange-600 hover:text-orange-800",
     bgColor: "bg-orange-100",
   },
+  {
+    id: "study-record",
+    title: "StudyRecord",
+    description:
+      "学びを記録して、成長を見える化するWebアプリ。学習記録の作成・一覧・編集・削除、週ごと/カテゴリごとのまとめ表示、ユーザー情報編集やCSVインポートも可能。",
+    technologies: [
+      "Laravel 10",
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "MySQL",
+      "Docker"
+    ],
+    category: "学習管理",
+    image: "📚",
+    status: "開発中",
+    linkColor: "text-blue-600 hover:text-blue-800",
+    bgColor: "bg-blue-100",
+    github: "https://github.com/miyo-naka/StudyRecord"
+  },
 ];
