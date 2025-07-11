@@ -1,42 +1,9 @@
 import Link from "next/link";
+import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
+import { projects } from "@/const/projects";
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "co2-calculator",
-      title: "CO₂排出量計算アプリ",
-      description:
-        "家庭や生活スタイルから、月間のCO₂排出量を簡単に計算できるWebアプリ。電気・ガス・水道、交通手段、食生活の影響を総合的に計算します。",
-      technologies: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      category: "環境技術",
-      image: "🌱",
-      status: "完了",
-    },
-    {
-      id: "dinner-record",
-      title: "Dinner Record",
-      description:
-        "日々の夕食を簡単に記録・管理できるWebアプリケーション。シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-      category: "Webアプリ",
-      image: "🍽",
-      status: "完了",
-    },
-  ];
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "完了":
-        return "bg-green-100 text-green-800";
-      case "開発中":
-        return "bg-yellow-100 text-yellow-800";
-      case "計画中":
-        return "bg-blue-100 text-blue-800";
-      default:
-        return "bg-gray-100 text-gray-800";
-    }
-  };
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#EAF1EB] to-blue-100">
       {/* Header */}
@@ -55,58 +22,9 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <section className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow mb-8"
-            >
-              <div className="md:flex">
-                <div className="md:w-1/3 bg-green-100 flex items-center justify-center p-8">
-                  <span className="text-6xl">{project.image}</span>
-                </div>
-                <div className="md:w-2/3 p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-semibold text-gray-900">
-                      {project.title}
-                    </h3>
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
-                        project.status
-                      )}`}
-                    >
-                      {project.status}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-600 mb-6">{project.description}</p>
-
-                  <div className="mb-6">
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium border bg-green-100 text-green-800 border-green-200">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Link
-                    href={`/projects/${project.id}`}
-                    className="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
-                  >
-                    詳細を見る →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={project.id} {...project} />
           ))}
         </div>
       </section>
@@ -162,6 +80,8 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
