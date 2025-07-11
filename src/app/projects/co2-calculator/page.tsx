@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function CO2CalculatorProject() {
   return (
@@ -7,17 +8,17 @@ export default function CO2CalculatorProject() {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center mb-6">
-            <Link 
-              href="/projects" 
+            <Link
+              href="/projects"
               className="text-blue-600 hover:text-blue-800 font-medium mr-4"
             >
               ← プロジェクト一覧に戻る
             </Link>
           </div>
-          
+
           <div className="text-center mb-12">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-green-600 text-4xl">🌱</span>
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <Image src="/CO2.png" alt="CO₂ Icon" width={40} height={40} />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               CO₂排出量計算アプリ
@@ -33,7 +34,9 @@ export default function CO2CalculatorProject() {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">プロジェクト概要</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              プロジェクト概要
+            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4">目的</h3>
@@ -91,14 +94,16 @@ export default function CO2CalculatorProject() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold mb-4">開発期間</h3>
-              <p className="text-gray-600 mb-4">2025年7月 - 2025年7月（1週間）</p>
-              
+              <p className="text-gray-600 mb-4">
+                2025年7月 - 2025年7月（1週間）
+              </p>
+
               <h3 className="text-xl font-semibold mb-4">開発体制</h3>
               <p className="text-gray-600 mb-4">個人開発</p>
-              
+
               <h3 className="text-xl font-semibold mb-4">デプロイ</h3>
               <p className="text-gray-600">Vercel</p>
             </div>
@@ -114,7 +119,9 @@ export default function CO2CalculatorProject() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-600">計算機能</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-600">
+                計算機能
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• 電気・ガス・水道の使用量からCO₂排出量を計算</li>
                 <li>• 交通手段（車・電車・バス）の排出量計算</li>
@@ -122,9 +129,11 @@ export default function CO2CalculatorProject() {
                 <li>• 月間総排出量の表示と比較</li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-600">UI/UX機能</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-600">
+                UI/UX機能
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• 段階的な入力フォーム</li>
                 <li>• スムーズなアニメーション</li>
@@ -155,7 +164,7 @@ export default function CO2CalculatorProject() {
                 CO₂排出量を計算するロジックを設計。直感的なUI/UXを重視しました。
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6">
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4">
@@ -165,11 +174,11 @@ export default function CO2CalculatorProject() {
               </div>
               <p className="text-gray-600">
                 React 19とNext.js 15を使用してコンポーネントベースの開発を実施。
-                Tailwind CSSでレスポンシブデザインを実現し、
-                Framer Motionでスムーズなアニメーションを追加しました。
+                Tailwind CSSでレスポンシブデザインを実現し、 Framer
+                Motionでスムーズなアニメーションを追加しました。
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6">
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4">
@@ -186,8 +195,6 @@ export default function CO2CalculatorProject() {
         </div>
       </section>
 
-
-
       {/* Results & Learning */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
@@ -197,7 +204,9 @@ export default function CO2CalculatorProject() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-green-600">技術的な学び</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-600">
+                  技術的な学び
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• React 19とNext.js 15の最新機能の活用</li>
                   <li>• Framer Motionを使ったアニメーション実装</li>
@@ -205,9 +214,11 @@ export default function CO2CalculatorProject() {
                   <li>• レスポンシブデザインの実装</li>
                 </ul>
               </div>
-              
+
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-green-600">プロダクト面の学び</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-600">
+                  プロダクト面の学び
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• 環境データの正確な計算ロジック</li>
                   <li>• ユーザビリティを重視したUI設計</li>
@@ -223,28 +234,26 @@ export default function CO2CalculatorProject() {
       {/* Links */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            関連リンク
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">関連リンク</h2>
           <div className="flex justify-center gap-4">
-            <a 
-              href="https://co2-calculator-pink.vercel.app/" 
+            <a
+              href="https://co2-calculator-pink.vercel.app/"
               className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               デモを見る
             </a>
-            <a 
-              href="https://github.com/miyo-naka/co2-calculator" 
+            <a
+              href="https://github.com/miyo-naka/co2-calculator"
               className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
-            <Link 
-              href="/projects" 
+            <Link
+              href="/projects"
               className="border border-gray-600 text-gray-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
               他のプロジェクトを見る
@@ -254,4 +263,4 @@ export default function CO2CalculatorProject() {
       </section>
     </main>
   );
-} 
+}

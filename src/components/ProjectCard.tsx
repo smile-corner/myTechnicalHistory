@@ -6,7 +6,7 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   category?: string;
-  image: string;
+  image: { src: string; alt: string };
   status?: string;
   linkColor?: string;
   bgColor?: string;
@@ -40,7 +40,7 @@ export default function ProjectCard({
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
       <div className="md:flex">
         <div className={`md:w-1/3 ${bgColor} flex items-center justify-center p-8`}>
-          <span className="text-6xl">{image}</span>
+        <img src={image.src} alt={image.alt} className="h-16 w-16 object-contain" />
         </div>
         <div className="md:w-2/3 p-8">
           <div className="flex items-center justify-between mb-4">

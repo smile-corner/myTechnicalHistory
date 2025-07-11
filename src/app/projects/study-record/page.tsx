@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function StudyRecordProject() {
@@ -7,16 +8,21 @@ export default function StudyRecordProject() {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center mb-6">
-            <Link 
-              href="/projects" 
+            <Link
+              href="/projects"
               className="text-blue-600 hover:text-blue-800 font-medium mr-4"
             >
               ← プロジェクト一覧に戻る
             </Link>
           </div>
           <div className="text-center mb-12">
-            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-blue-600 text-4xl">📚</span>
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <Image
+                src="/LearningTrackerLogo.png"
+                alt="CO₂ Icon"
+                width={40}
+                height={40}
+              />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               StudyRecord
@@ -32,7 +38,9 @@ export default function StudyRecordProject() {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">プロジェクト概要</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              プロジェクト概要
+            </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4">目的</h3>
@@ -97,7 +105,7 @@ export default function StudyRecordProject() {
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold mb-4">開発期間</h3>
-              <p className="text-gray-600 mb-4">2025年5月（約2週間）</p>
+              <p className="text-gray-600 mb-4">2025年4月～5月（約3週間）</p>
               <h3 className="text-xl font-semibold mb-4">開発体制</h3>
               <p className="text-gray-600 mb-4">個人開発</p>
               <h3 className="text-xl font-semibold mb-4">デプロイ</h3>
@@ -115,7 +123,9 @@ export default function StudyRecordProject() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">学習記録管理</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                学習記録管理
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• 記録の作成・一覧・編集・削除</li>
                 <li>• 週ごと・カテゴリごとのまとめ表示</li>
@@ -123,7 +133,9 @@ export default function StudyRecordProject() {
               </ul>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">ユーザー管理</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                ユーザー管理
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• ユーザー登録・ログイン</li>
                 <li>• ユーザー情報編集</li>
@@ -156,7 +168,9 @@ export default function StudyRecordProject() {
                 <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-4">
                   2
                 </div>
-                <h3 className="text-xl font-semibold">バックエンド・フロントエンド開発</h3>
+                <h3 className="text-xl font-semibold">
+                  バックエンド・フロントエンド開発
+                </h3>
               </div>
               <p className="text-gray-600">
                 LaravelでAPIを構築し、Next.js/Reactでフロントエンドを開発。Dockerでローカル開発環境を整備し、MySQLでデータを管理しました。
@@ -186,7 +200,9 @@ export default function StudyRecordProject() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">技術的な学び</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                  技術的な学び
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• LaravelとNext.jsのAPI連携</li>
                   <li>• Dockerによる開発環境構築</li>
@@ -195,7 +211,9 @@ export default function StudyRecordProject() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">プロダクト面の学び</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                  プロダクト面の学び
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• 学習継続のモチベーション向上</li>
                   <li>• ユーザー目線での機能設計</li>
@@ -210,20 +228,18 @@ export default function StudyRecordProject() {
       {/* Links */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            関連リンク
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">関連リンク</h2>
           <div className="flex justify-center gap-4">
-            <a 
-              href="https://github.com/miyo-naka/StudyRecord" 
+            <a
+              href="https://github.com/miyo-naka/StudyRecord"
               className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
-            <Link 
-              href="/projects" 
+            <Link
+              href="/projects"
               className="border border-gray-600 text-gray-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
               他のプロジェクトを見る
@@ -233,4 +249,4 @@ export default function StudyRecordProject() {
       </section>
     </main>
   );
-} 
+}
