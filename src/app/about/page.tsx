@@ -3,30 +3,28 @@ import Footer from "@/components/Footer";
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#EAF1EB] to-blue-100">
-      <section className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center my-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">About</h1>
-          </div>
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">自己紹介</h2>
-            環境問題に関心を持つ開発者として、テクノロジーを通じて
-            持続可能な社会の実現に貢献したいと考えています。
-            現在はWeb開発の基礎を学びながら、小さなプロジェクトから
-            少しずつスキルを積み重ねている段階です。
-          </div>
+    <main className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1]">
+      <section className="max-w-4xl mx-auto px-4 py-16">
+        <div className="text-center my-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About</h1>
+        </div>
+        <div className="bg-white rounded-2xl shadow-lg p-10 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">自己紹介</h2>
+          オーストラリア在住の日本人。環境問題に関心を持つWeb開発者です。
+          テクノロジーを通じて 持続可能な社会の実現に貢献したいと考えています。
+          現在はWeb開発の基礎を学びながら、小さなプロジェクトから
+          少しずつスキルを積み重ねている段階です。
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-gradient-to-br from-white to-blue-50 py-16">
+        <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             技術・興味分野
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-xl font-semibold mb-4">技術</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -48,7 +46,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-xl font-semibold mb-4">興味分野</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• 環境技術、サステナビリティ、農業</li>
@@ -62,12 +60,12 @@ export default function About() {
       </section>
 
       {/* Goals Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             今後の目標
           </h2>
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white rounded-2xl shadow-lg p-10">
             <div className="space-y-6">
               <div className="border-l-4 border-green-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900">
@@ -106,11 +104,11 @@ export default function About() {
       </section>
 
       {/* Project Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="py-16">
         <div className="flex justify-center gap-4">
           <Link
             href="/projects"
-            className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base"
           >
             プロジェクトを見る
           </Link>

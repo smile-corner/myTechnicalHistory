@@ -5,9 +5,9 @@ import { projects } from "@/const/projects";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#EAF1EB] to-blue-100">
+    <main className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1]">
       {/* Header */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             プロジェクト
@@ -21,8 +21,8 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid */}
-      <section className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section className="bg-gradient-to-br from-white to-blue-50 py-8">
+        <div className="max-w-4xl mx-auto space-y-8 px-4">
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
@@ -30,33 +30,23 @@ export default function Projects() {
       </section>
 
       {/* Future Projects Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             今後の予定
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-blue-600 text-xl">💻</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">
-                ポートフォリオサイト
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Next.jsとTailwind
-                CSSを使用したモダンなポートフォリオサイトの完成
-              </p>
-              <span className="text-sm text-gray-500">計画中</span>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-purple-600 text-xl">📊</span>
-              </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-xl font-semibold mb-3">環境データ可視化</h3>
               <p className="text-gray-600 mb-4">
                 環境データを活用した可視化プロジェクト
+              </p>
+              <span className="text-sm text-gray-500">計画中</span>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h3 className="text-xl font-semibold mb-3">ブログサイト運営</h3>
+              <p className="text-gray-600 mb-4">
+                オーストラリア生活についてのブログサイトを運営予定
               </p>
               <span className="text-sm text-gray-500">計画中</span>
             </div>
@@ -65,7 +55,7 @@ export default function Projects() {
       </section>
 
       {/* Contact Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="py-16">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             もっと知りたい方へ
@@ -73,7 +63,7 @@ export default function Projects() {
           <div className="flex justify-center gap-4">
             <Link
               href="/about"
-              className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+              className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base"
             >
               自己紹介を見る
             </Link>
