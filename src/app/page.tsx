@@ -13,10 +13,10 @@ export default function Home() {
         style={{ minHeight: "70vh" }}
       >
         <Image
-          src="/hero-bg.jpg"
+          src="/hero-bg2.JPG"
           alt="Background Image"
           width={1920}
-          height={1080}
+          height={1280}
           className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none"
         />
         <div className="relative z-10 text-center px-4 py-24">
