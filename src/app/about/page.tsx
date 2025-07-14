@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -8,12 +9,24 @@ export default function About() {
         <div className="text-center my-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">About</h1>
         </div>
-        <div className="bg-white rounded-2xl shadow-lg p-10 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">自己紹介</h2>
-          オーストラリア在住の日本人。環境問題に関心を持つWeb開発者です。
-          テクノロジーを通じて 持続可能な社会の実現に貢献したいと考えています。
-          現在はWeb開発の基礎を学びながら、小さなプロジェクトから
-          少しずつスキルを積み重ねている段階です。
+        <div className="flex bg-white rounded-2xl shadow-lg p-10 mb-12">
+          <Image
+            src="/face.png"
+            alt="My face"
+            width={80}
+            height={80}
+            className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
+          />
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">自己紹介</h2>
+            <p>
+              オーストラリア在住の日本人。環境問題に関心を持つWeb開発者です。
+              テクノロジーを通じて
+              持続可能な社会の実現に貢献したいと考えています。
+              現在はWeb開発の基礎を学びながら、小さなプロジェクトから
+              少しずつスキルを積み重ねている段階です。
+            </p>
+          </div>
         </div>
       </section>
 
