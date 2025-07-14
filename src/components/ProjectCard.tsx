@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -20,7 +21,6 @@ export default function ProjectCard({
   category,
   image,
   status,
-  linkColor = "text-[#2C5D47] hover:text-green-800",
   bgColor = "bg-green-50",
 }: ProjectCardProps) {
   const getStatusColor = (status: string) => {
@@ -39,8 +39,16 @@ export default function ProjectCard({
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
       <div className="md:flex">
-        <div className={`md:w-1/3 ${bgColor} flex items-center justify-center p-10`}> 
-          <img src={image.src} alt={image.alt} className="h-20 w-20 object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" />
+        <div
+          className={`md:w-1/3 ${bgColor} flex items-center justify-center p-10`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={80}
+            height={80}
+            className="h-20 w-20 object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300"
+          />
         </div>
         <div className="md:w-2/3 p-10 flex flex-col justify-between">
           <div>
@@ -50,7 +58,9 @@ export default function ProjectCard({
               </h3>
               {status && (
                 <span
-                  className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(status)}`}
+                  className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
+                    status
+                  )}`}
                 >
                   {status}
                 </span>
@@ -87,4 +97,4 @@ export default function ProjectCard({
       </div>
     </div>
   );
-} 
+}
