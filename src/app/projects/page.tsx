@@ -1,7 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.5 },
+  }),
+};
 
 export default function Projects() {
   return (
@@ -22,9 +34,18 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <section className="bg-gradient-to-br from-white to-blue-50 py-8">
-        <div className="max-w-4xl mx-auto space-y-8 px-4">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+        <div className="max-w-4xl mx-auto space-y-8">
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.id}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={i}
+              viewport={{ once: true }}
+            >
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
         </div>
       </section>

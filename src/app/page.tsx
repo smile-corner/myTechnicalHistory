@@ -1,8 +1,31 @@
+"use client";
+
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+
+const MotionImage = motion(Image);
+const heroImageFadeUp: Variants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: {
+    opacity: 0.2,
+    scale: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.5 },
+  }),
+};
 
 export default function Home() {
   return (
@@ -12,23 +35,28 @@ export default function Home() {
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{ minHeight: "70vh" }}
       >
-        <Image
+        <MotionImage
           src="/hero-bg2.JPG"
           alt="Background Image"
           width={1920}
-          height={1280}
+          height={1080}
+          variants={heroImageFadeUp}
+          initial="hidden"
+          animate="visible"
           className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none"
         />
         <div className="relative z-10 text-center px-4 py-24">
           <h1 className="text-6xl font-bold text-gray-900 mb-6 drop-shadow-lg">
-            My technical history
+            M&apos;s history
           </h1>
           <p className="text-2xl text-gray-700 mb-8 max-w-3xl mx-auto drop-shadow">
             小さく始める、環境×テクノロジーの一歩
           </p>
           <Link
             href="#projects"
-            className="bg-[#2C5D47] text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors text-lg font-medium shadow-lg"
+            className="bg-[#2C5D47] text-white px-8 py-3 rounded-lg hover:scale-105 hover:bg-green-700
+            text-lg font-medium shadow-lg
+            transition-transform duration-200 inline-block"
           >
             プロジェクトを見る
           </Link>
@@ -43,9 +71,19 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           プロジェクト
         </h2>
+
         <div className="max-w-4xl mx-auto space-y-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.id}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={i}
+              viewport={{ once: true }}
+            >
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
         </div>
       </section>
