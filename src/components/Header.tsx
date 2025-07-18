@@ -5,8 +5,11 @@ export default function Header() {
     <nav className="backdrop-blur bg-white/80 border-b border-gray-100 shadow-sm sticky top-0 z-30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold text-[#2C5D47] tracking-tight">
-            My technical history
+          <Link
+            href="/"
+            className="text-2xl font-bold text-[#2C5D47] tracking-tight"
+          >
+            M&apos;s history
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link
@@ -32,4 +35,4 @@ export default function Header() {
       </div>
     </nav>
   );
-} 
+}
