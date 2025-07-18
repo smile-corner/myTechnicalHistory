@@ -11,19 +11,8 @@ export const projects = [
     linkColor: "text-[#2C5D47] hover:text-green-800",
     bgColor: "bg-green-100",
   },
-  {
-    id: "dinner-record",
-    title: "Dinner Record",
-    description:
-      "日々の夕食を簡単に記録・管理できるWebアプリケーション。シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-    category: "Webアプリ",
-    image: { src: "/DinnerRecord.png", alt: "Dinner" },
-    status: "完了",
-    linkColor: "text-orange-600 hover:text-orange-800",
-    bgColor: "bg-orange-100",
-  },
-  {
+
+    {
     id: "study-record",
     title: "StudyRecord",
     description:
@@ -37,11 +26,46 @@ export const projects = [
       "MySQL",
       "Docker",
     ],
-    category: "学習管理",
+    category: "学習",
     image: { src: "/LearningTrackerLogo.png", alt: "Learning" },
     status: "開発中",
     linkColor: "text-blue-600 hover:text-blue-800",
     bgColor: "bg-blue-100",
     github: "https://github.com/miyo-naka/StudyRecord",
+  },
+
+  {
+    id: "dinner-record",
+    title: "Dinner Record",
+    description:
+      "日々の夕食を簡単に記録・管理できるWebアプリケーション。シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+    category: "Webアプリ",
+    image: { src: "/DinnerRecord.png", alt: "Dinner" },
+    status: "完了",
+    linkColor: "text-orange-600 hover:text-orange-800",
+    bgColor: "bg-orange-100",
+  },
+
+    {
+    id: "use-it-or-lose-it",
+    title: "Use It or Lose It",
+    description:
+      "語学学習のための単語管理・クイズ・進捗管理アプリ",
+    technologies: [
+      "Laravel 10",
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "MySQL",
+      "Docker",
+    ],
+    category: "学習",
+    image: { src: "/UseitorLoseit.png", alt: "Use it or Lose it" },
+    status: "完了",
+    linkColor: "text-blue-600 hover:text-blue-800",
+    bgColor: "bg-blue-100",
+    github: "https://github.com/miyo-naka/Use_It_or_Lose_It",
   },
 ];
