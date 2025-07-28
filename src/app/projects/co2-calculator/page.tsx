@@ -18,7 +18,12 @@ export default function CO2CalculatorProject() {
 
           <div className="text-center mb-12">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <Image src="/CO2.png" alt="CO₂ Icon" width={40} height={40} />
+              <Image
+                src="/projects/CO2.png"
+                alt="CO₂ Icon"
+                width={50}
+                height={50}
+              />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               CO₂排出量計算アプリ

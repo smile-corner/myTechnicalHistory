@@ -19,10 +19,10 @@ export default function DinnerRecordProject() {
           <div className="text-center mb-12">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
               <Image
-                src="/DinnerRecord.png"
+                src="/projects/DinnerRecord.png"
                 alt="CO₂ Icon"
-                width={40}
-                height={40}
+                width={50}
+                height={50}
               />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
