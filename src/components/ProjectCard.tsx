@@ -1,17 +1,6 @@
+import { ProjectsType } from "@/type/projectsType";
 import Image from "next/image";
 import Link from "next/link";
-
-interface ProjectCardProps {
-  id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  category?: string;
-  image: { src: string; alt: string };
-  status?: string;
-  linkColor?: string;
-  bgColor?: string;
-}
 
 export default function ProjectCard({
   id,
@@ -22,7 +11,7 @@ export default function ProjectCard({
   image,
   status,
   bgColor = "bg-green-50",
-}: ProjectCardProps) {
+}: ProjectsType) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "完了":
