@@ -47,7 +47,7 @@ export const projects: ProjectsType[] = [
       "Docker",
     ],
     category: "学習",
-    image: { src: "/projects/LearningTrackerLogo.png", alt: "Learning" },
+    image: { src: "/projects/study-record-logo.png", alt: "Learning" },
     status: "開発中",
     linkColor: "text-blue-600 hover:text-blue-800",
     bgColor: "bg-blue-100",
