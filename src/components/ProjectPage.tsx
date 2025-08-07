@@ -53,6 +53,7 @@ export default function ProjectPage({ data }: ProjectPageProps) {
         purpose={data.overview.purpose}
         background={data.overview.background}
         features={data.overview.features}
+        images={data.overview.images}
       />
 
       <TechnicalDetails

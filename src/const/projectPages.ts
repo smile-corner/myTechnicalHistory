@@ -12,6 +12,18 @@ export const projectPages: { [key: string]: ProjectPageData } = {
         "環境意識の向上とサステナブルな生活の促進を目的として、家庭や生活スタイルから月間のCO₂排出量を簡単に計算できるWebアプリケーションを開発しました。電気・ガス・水道、交通手段、食生活の影響を総合的に計算し、ユーザーが自分の生活が環境に与える影響を理解できるようにしています。",
       background:
         "環境問題への関心が高まる中、個人レベルでのCO₂排出量を簡単に計算できるツールの必要性を感じ、開発を開始しました。",
+      images: [
+        {
+          src: "/projects/co2-calculator-main.png",
+          alt: "CO₂ Calculator メイン画面",
+          caption: "メイン画面 - 段階的な入力フォーム",
+        },
+        {
+          src: "/projects/co2-calculator-result.png",
+          alt: "CO₂ Calculator 結果画面",
+          caption: "結果画面 - 月間CO₂排出量の表示",
+        },
+      ],
     },
     technical: {
       technologies: [
@@ -128,6 +140,18 @@ export const projectPages: { [key: string]: ProjectPageData } = {
         "カレンダー表示",
         "ジャンル別絞り込み",
       ],
+      images: [
+        {
+          src: "/projects/dinner-record-main.png",
+          alt: "Dinner Record メイン画面",
+          caption: "メイン画面 - 食事記録の一覧表示",
+        },
+        {
+          src: "/projects/dinner-record-calendar.png",
+          alt: "Dinner Record カレンダー画面",
+          caption: "カレンダー画面 - 月間の食事記録",
+        },
+      ],
     },
     technical: {
       technologies: [
@@ -239,7 +263,7 @@ export const projectPages: { [key: string]: ProjectPageData } = {
     ],
   },
   "study-record": {
-    iconSrc: "/projects/LearningTrackerLogo.png",
+    iconSrc: "/projects/study-record-logo.png",
     iconAlt: "Study Record Icon",
     title: "StudyRecord",
     description: "学びを記録して、成長を見える化するWebアプリケーション",
@@ -248,6 +272,18 @@ export const projectPages: { [key: string]: ProjectPageData } = {
         "学習の記録・可視化を通じて、日々の成長を実感できるようにすることを目的としたWebアプリケーションです。記録の作成・一覧・編集・削除、週ごと・カテゴリごとのまとめ表示、ユーザー情報編集やCSVインポートなど、学習管理に必要な機能を備えています。",
       background:
         "日々の学びを継続し、振り返りや分析をしやすくするためのツールが欲しくて開発を始めました。バックエンド・フロントエンド・インフラの実践的なスキル習得も兼ねています。",
+      images: [
+        {
+          src: "/projects/study-record-main.png",
+          alt: "Study Record メイン画面",
+          caption: "メイン画面 - 学習記録の一覧表示",
+        },
+        {
+          src: "/projects/study-record-summary.png",
+          alt: "Study Record サマリー画面",
+          caption: "サマリー画面 - 週間・カテゴリ別の集計",
+        },
+      ],
     },
     technical: {
       technologies: [
@@ -347,6 +383,18 @@ export const projectPages: { [key: string]: ProjectPageData } = {
         "英単語クイズを繰り返し解くことによって、英単語の定着を目的としたWebアプリケーションです。英単語一覧の表示・追加・編集・削除、CSVインポートなどにより、自分だけのオリジナルの英単語クイズを作成できます。",
       background:
         "苦手な英単語を覚えるためのツールが欲しくて開発しました。バックエンド・フロントエンド・Dockerの実践的なスキル習得も兼ねています。",
+      images: [
+        {
+          src: "/projects/use-it-or-lose-it-main.png",
+          alt: "Use it or Lose it メイン画面",
+          caption: "メイン画面 - 単語一覧とクイズ機能",
+        },
+        {
+          src: "/projects/use-it-or-lose-it-progress.png",
+          alt: "Use it or Lose it 進捗画面",
+          caption: "Progress画面 - 英単語の学習の記録",
+        },
+      ],
     },
     technical: {
       technologies: [
@@ -448,6 +496,18 @@ export const projectPages: { [key: string]: ProjectPageData } = {
         "世界および各地域の再生可能エネルギー導入の推移を可視化。再生可能エネルギー（太陽光・風力・水力・バイオエネルギー等）のシェアや発電量の変化を、グラフで直感的に把握できます",
       background:
         "このダッシュボード開発を通じて、単に技術を習得するだけでなく、現実のデータに触れ、それをどのようにユーザーに分かりやすく提示するかという実践的な思考力を養うことを目指しました。特に、再生可能エネルギーの普及率や地域ごとの進捗状況について、漠然としたイメージだけでなく、具体的なデータに基づいて分析し可視化する過程そのものが大きな学びとなると考え、このダッシュボードの作成に着手しました",
+      images: [
+        {
+          src: "/projects/renewable-dashboard-main.png",
+          alt: "Renewable Dashboard メイン画面",
+          caption: "メイン画面 - 再生可能エネルギーの推移グラフ",
+        },
+        {
+          src: "/projects/renewable-dashboard-detail.png",
+          alt: "Renewable Dashboard 詳細画面",
+          caption: "詳細画面 - 地域別・エネルギー源別の分析",
+        },
+      ],
     },
     technical: {
       technologies: [

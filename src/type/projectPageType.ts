@@ -39,6 +39,11 @@ export interface ProjectPageData {
     purpose: string;
     background?: string;
     features?: string[];
+    images?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    }[];
   };
   technical: {
     technologies: Technology[];

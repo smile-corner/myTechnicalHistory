@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Technology,
   Feature,
@@ -11,12 +12,18 @@ interface ProjectOverviewProps {
   purpose: string;
   background?: string;
   features?: string[];
+  images?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  }[];
 }
 
 export function ProjectOverview({
   purpose,
   background,
   features,
+  images,
 }: ProjectOverviewProps) {
   return (
     <section className="container mx-auto px-4 py-16">
@@ -47,6 +54,31 @@ export function ProjectOverview({
               </div>
             )}
           </div>
+          
+          {/* プロジェクト画像 */}
+          {images && images.length > 0 && (
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold mb-4 text-center">プロジェクト画像</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {images.map((image, index) => (
+                  <div key={index} className="text-center">
+                    <div className="bg-gray-100 rounded-lg p-4 mb-2">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={400}
+                        height={300}
+                        className="rounded-lg shadow-md mx-auto"
+                      />
+                    </div>
+                    {image.caption && (
+                      <p className="text-sm text-gray-600 mt-2">{image.caption}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
