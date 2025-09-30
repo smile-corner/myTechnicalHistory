@@ -23,16 +23,16 @@ const fadeUp = {
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.5 },
+    transition: { delay: i * 0.2, duration: 0.3 },
   }),
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1]">
+    <main>
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1]"
         style={{ minHeight: "70vh" }}
       >
         <MotionImage
@@ -49,27 +49,28 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6 drop-shadow-lg">
             Eco Data Studio - 環境 × IT
           </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto drop-shadow">
+          <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto drop-shadow">
             環境×ITを目指すエンジニアの小さな実験と記録。
             <br />
             試作・実装・考察をまとめた技術の備忘録。
           </p>
           <Link
             href="#projects"
-            className="bg-[#2C5D47] text-white px-8 py-3 rounded-xl hover:scale-105 hover:bg-green-600
-            text-lg font-medium shadow-lg
-            transition-transform duration-200 inline-block"
+            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4 mr-4"
           >
-            プロジェクトを見る
+            ☞ プロジェクトを見る
+          </Link>
+          <Link
+            href="/about"
+            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
+          >
+            ☞ 自己紹介を見る
           </Link>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section
-        id="projects"
-        className="bg-gradient-to-br from-white to-blue-50 py-20"
-      >
+      <section id="projects" className="py-20">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           プロジェクト
         </h2>
@@ -92,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-gradient-to-br from-[#e0f2f1] to-white py-20">
+      <section className="bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1] py-10">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             About me
@@ -106,18 +107,18 @@ export default function Home() {
               className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
             />
             <div>
-              <p>
-                オーストラリア在住の日本人。環境問題に関心を持つWeb開発者です。
-                テクノロジーを通じて
-                持続可能な社会の実現に貢献したいと考えています。
-                現在はWeb開発の基礎を学びながら、小さなプロジェクトから
-                少しずつスキルを積み重ねている段階です。
+              <p className="text-sm leading-7">
+                オーストラリア在住の日本人Web開発者です。
+                <br />
+                「環境 ×
+                IT」というテーマを軸に、データ分析やWebアプリ開発を通じて、
+                社会に役立つプロダクトを生み出すことを目指しています。
               </p>
               <Link
                 href="/about"
                 className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
               >
-                自己紹介を見る
+                ☞ 自己紹介を見る
               </Link>
             </div>
           </div>
