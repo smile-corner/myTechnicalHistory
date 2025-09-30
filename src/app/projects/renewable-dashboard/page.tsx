@@ -1,8 +1,6 @@
 import ProjectPage from "../../../components/ProjectPage";
-import { projectPages } from "../../../const/projectPages";
+import { renewableDashboardData } from "../../../const/projects/renewable-dashboard";
 
 export default function RenewableDashboardProject() {
-  const data = projectPages["renewable-dashboard"];
-
-  return <ProjectPage data={data} />;
+  return <ProjectPage data={renewableDashboardData} />;
 }

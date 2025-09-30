@@ -1,8 +1,6 @@
 import ProjectPage from "../../../components/ProjectPage";
-import { projectPages } from "../../../const/projectPages";
+import { co2CalculatorData } from "../../../const/projects/co2-calculator";
 
 export default function CO2CalculatorProject() {
-  const data = projectPages["co2-calculator"];
-
-  return <ProjectPage data={data} />;
+  return <ProjectPage data={co2CalculatorData} />;
 }

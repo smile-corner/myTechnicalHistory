@@ -1,8 +1,6 @@
 import ProjectPage from "../../../components/ProjectPage";
-import { projectPages } from "../../../const/projectPages";
+import { dinnerRecordData } from "../../../const/projects/dinner-record";
 
 export default function DinnerRecordProject() {
-  const data = projectPages["dinner-record"];
-
-  return <ProjectPage data={data} />;
+  return <ProjectPage data={dinnerRecordData} />;
 }
