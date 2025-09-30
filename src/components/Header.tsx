@@ -9,26 +9,26 @@ export default function Header() {
             href="/"
             className="text-2xl font-bold text-[#2C5D47] tracking-tight"
           >
-            M&apos;s history
+            Eco Data Studio
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link
               href="/"
               className="text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium"
             >
-              ホーム
+              Home
             </Link>
             <Link
               href="/about"
               className="text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium"
             >
-              自己紹介
+              About me
             </Link>
             <Link
               href="/projects"
               className="text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium"
             >
-              プロジェクト
+              Projects
             </Link>
           </div>
         </div>

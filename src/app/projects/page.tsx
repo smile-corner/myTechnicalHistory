@@ -21,9 +21,7 @@ export default function Projects() {
       {/* Header */}
       <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            プロジェクト
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Projects</h1>
           <p className="text-l text-gray-600 max-w-3xl mx-auto">
             現在取り組んでいるプロジェクトや、これから挑戦したいプロジェクトをご紹介します。
             <br />

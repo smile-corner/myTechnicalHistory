@@ -3,7 +3,7 @@ import { ProjectsType } from "@/type/projectsType";
 export const projects: ProjectsType[] = [
   {
     id: "renewable-dashboard",
-    title: "再生可能エネルギーダッシュボード",
+    title: "Renewable Energy Dashboard",
     description:
       "世界および各地域の再生可能エネルギー導入の推移を可視化。再生可能エネルギー（太陽光・風力・水力・バイオエネルギー等）のシェアや発電量の変化を、グラフで直感的に把握できます",
     technologies: [

@@ -7,7 +7,7 @@ export default function About() {
     <main className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#e0f2f1]">
       <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center my-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">About</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About me</h1>
         </div>
         <div className="flex bg-white rounded-2xl shadow-lg p-10 mb-12">
           <Image
@@ -18,7 +18,6 @@ export default function About() {
             className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
           />
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">自己紹介</h2>
             <p>
               オーストラリア在住の日本人。環境問題に関心を持つWeb開発者です。
               テクノロジーを通じて
