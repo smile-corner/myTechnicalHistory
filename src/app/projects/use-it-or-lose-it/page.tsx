@@ -1,8 +1,6 @@
 import ProjectPage from "../../../components/ProjectPage";
-import { projectPages } from "../../../const/projectPages";
+import { useItOrLoseItData } from "../../../const/projects/use-it-or-lose-it";
 
 export default function UseItOrLoseItProject() {
-  const data = projectPages["use-it-or-lose-it"];
-
-  return <ProjectPage data={data} />;
+  return <ProjectPage data={useItOrLoseItData} />;
 }

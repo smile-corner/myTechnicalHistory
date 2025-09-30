@@ -1,8 +1,6 @@
 import ProjectPage from "../../../components/ProjectPage";
-import { projectPages } from "../../../const/projectPages";
+import { studyRecordData } from "../../../const/projects/study-record";
 
 export default function StudyRecordProject() {
-  const data = projectPages["study-record"];
-
-  return <ProjectPage data={data} />;
+  return <ProjectPage data={studyRecordData} />;
 }

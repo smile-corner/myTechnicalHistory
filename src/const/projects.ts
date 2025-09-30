@@ -34,7 +34,7 @@ export const projects: ProjectsType[] = [
 
   {
     id: "study-record",
-    title: "StudyRecord",
+    title: "Learning Tracker",
     description:
       "学びを記録して、成長を見える化するWebアプリ。学習記録の作成・一覧・編集・削除、週ごと/カテゴリごとのまとめ表示、ユーザー情報編集やCSVインポートも可能。",
     technologies: [
@@ -60,7 +60,7 @@ export const projects: ProjectsType[] = [
     description:
       "日々の夕食を簡単に記録・管理できるWebアプリケーション。シンプルなUIで料理名やメモを入力し、過去の食事を一覧表示・編集・削除できます。",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-    category: "Webアプリ",
+    category: "家庭",
     image: { src: "/projects/DinnerRecord.png", alt: "Dinner" },
     status: "完了",
     linkColor: "text-orange-600 hover:text-orange-800",
