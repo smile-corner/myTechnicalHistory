@@ -97,7 +97,7 @@ export const dinnerRecordData: ProjectPageData = {
   learnings: [
     {
       title: "技術的な学び",
-      color: "#10b981",
+      color: "#f97316",
       items: [
         "Firebase Realtime Databaseの活用",
         "認証機能の実装",
@@ -107,7 +107,7 @@ export const dinnerRecordData: ProjectPageData = {
     },
     {
       title: "プロダクト面の学び",
-      color: "#10b981",
+      color: "#f97316",
       items: [
         "ユーザビリティの重要性",
         "シンプルな設計の効果",
