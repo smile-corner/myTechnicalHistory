@@ -2,6 +2,28 @@ import { ProjectsType } from "@/type/projectsType";
 
 export const projects: ProjectsType[] = [
   {
+    id: "family-finance-dashboard",
+    title: "Family Finance Dashboard",
+    description:
+      "家計データの内訳を分かりやすく表示し、何にお金を使っているかを分かりやすく認識できるダッシュボード。家族間で共有できるため、家計の透明感を向上させることができます。",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Recharts",
+      "Firebase",
+    ],
+    category: "家庭",
+    image: {
+      src: "/projects/family-finance-dashboard.png",
+      alt: "Family Finance",
+    },
+    status: "完了",
+    linkColor: "text-orange-600 hover:text-orange-800",
+    bgColor: "bg-orange-100",
+    github: "https://github.com/smile-corner/family_finance_dashboard",
+  },
+  {
     id: "renewable-dashboard",
     title: "Renewable Energy Dashboard",
     description:
