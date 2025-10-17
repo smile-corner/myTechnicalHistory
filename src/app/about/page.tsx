@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function About() {
   return (
@@ -127,12 +127,11 @@ export default function About() {
       {/* Project Section */}
       <section className="pb-16">
         <div className="flex justify-center gap-4">
-          <Link
+          <Button
             href="/projects"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base"
-          >
-            ☞ プロジェクトを見る
-          </Link>
+            label="☞ プロジェクトを見る"
+            variant="gradient"
+          />
         </div>
       </section>
 

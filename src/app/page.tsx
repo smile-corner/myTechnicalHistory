@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import ProjectCardForHome from "@/components/ProjectCardForHome";
+import Button from "@/components/Button";
 
 const MotionImage = motion(Image);
 const heroImageFadeUp: Variants = {
@@ -54,18 +54,14 @@ export default function Home() {
             <br />
             試作・実装・考察をまとめた技術の備忘録。
           </p>
-          <Link
-            href="#projects"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4 mr-4"
-          >
-            ☞ プロジェクトを見る
-          </Link>
-          <Link
-            href="/about"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
-          >
-            ☞ 自己紹介を見る
-          </Link>
+          <div className="flex gap-6">
+            <Button
+              href="/projects"
+              label="☞ プロジェクトを見る"
+              variant="gradient"
+            />
+            <Button href="/about" label="☞ 自己紹介を見る" variant="gradient" />
+          </div>
         </div>
       </section>
 
@@ -114,12 +110,11 @@ export default function Home() {
                 IT」というテーマを軸に、データ分析やWebアプリ開発を通じて、
                 社会に役立つプロダクトを生み出すことを目指しています。
               </p>
-              <Link
+              <Button
                 href="/about"
-                className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
-              >
-                ☞ 自己紹介を見る
-              </Link>
+                label="☞ 自己紹介を見る"
+                variant="gradient"
+              />
             </div>
           </div>
         </div>

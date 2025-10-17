@@ -1,6 +1,6 @@
 import { ProjectsType } from "@/type/projectsType";
 import Image from "next/image";
-import Link from "next/link";
+import Button from "./Button";
 
 export default function ProjectCard({
   id,
@@ -75,12 +75,11 @@ export default function ProjectCard({
             </div>
           </div>
           <div>
-            <Link
+            <Button
               href={`/projects/${id}`}
-              className="inline-block bg-[#2C5D47] text-white px-6 py-2 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-sm"
-            >
-              詳細を見る →
-            </Link>
+              label="☞ 詳細を見る"
+              variant="gradient"
+            />
           </div>
         </div>
       </div>
