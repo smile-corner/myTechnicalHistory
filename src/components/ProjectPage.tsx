@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectPageData } from "../type/projectPageType";
@@ -9,6 +11,7 @@ import {
   ResultsLearning,
   ProjectLinks,
 } from "./ProjectSections";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 interface ProjectPageProps {
   data: ProjectPageData;
@@ -70,6 +73,8 @@ export default function ProjectPage({ data }: ProjectPageProps) {
       <ResultsLearning learnings={data.learnings} />
 
       <ProjectLinks links={data.links} />
+
+      <ScrollToTopButton />
     </main>
   );
 }

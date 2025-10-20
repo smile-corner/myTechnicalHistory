@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
 import { motion } from "framer-motion";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -32,7 +33,7 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <section className="py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-8 w-[90%] md:w-full">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
@@ -91,6 +92,8 @@ export default function Projects() {
       </section>
 
       <Footer />
+
+      <ScrollToTopButton />
     </main>
   );
 }

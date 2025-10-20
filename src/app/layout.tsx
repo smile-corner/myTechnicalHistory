@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My technical history",
+  title: "Eco Data Studio - 環境 × IT -",
   description: "私の技術ポートフォリオサイトです",
 };
 

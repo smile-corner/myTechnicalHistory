@@ -6,6 +6,7 @@ import {
   Learning,
   ProjectLink,
 } from "../type/projectPageType";
+import Button from "./Button";
 
 // プロジェクト概要セクション
 interface ProjectOverviewProps {
@@ -54,11 +55,13 @@ export function ProjectOverview({
               </div>
             )}
           </div>
-          
+
           {/* プロジェクト画像 */}
           {images && images.length > 0 && (
             <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-4 text-center">プロジェクト画像</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">
+                プロジェクト画像
+              </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {images.map((image, index) => (
                   <div key={index} className="text-center">
@@ -72,7 +75,9 @@ export function ProjectOverview({
                       />
                     </div>
                     {image.caption && (
-                      <p className="text-sm text-gray-600 mt-2">{image.caption}</p>
+                      <p className="text-sm text-gray-600 mt-2">
+                        {image.caption}
+                      </p>
                     )}
                   </div>
                 ))}
@@ -246,57 +251,40 @@ interface ProjectLinksProps {
 }
 
 export function ProjectLinks({ links }: ProjectLinksProps) {
-  const getLinkClasses = (link: ProjectLink) => {
-    const baseClasses = "px-6 py-3 rounded-lg transition-colors";
-
-    if (link.isPrimary) {
-      const colorMap: { [key: string]: string } = {
-        green: "bg-green-600 text-white hover:bg-green-700",
-        blue: "bg-blue-600 text-white hover:bg-blue-700",
-        orange: "bg-orange-600 text-white hover:bg-orange-700",
-        purple: "bg-purple-600 text-white hover:bg-purple-700",
-        red: "bg-red-600 text-white hover:bg-red-700",
-      };
-      return `${baseClasses} ${colorMap[link.color || "blue"]}`;
-    } else {
-      const colorMap: { [key: string]: string } = {
-        green: "border border-green-600 text-green-600 hover:bg-green-50",
-        blue: "border border-blue-600 text-blue-600 hover:bg-blue-50",
-        orange: "border border-orange-600 text-orange-600 hover:bg-orange-50",
-        purple: "border border-purple-600 text-purple-600 hover:bg-purple-50",
-        red: "border border-red-600 text-red-600 hover:bg-red-50",
-        gray: "border border-gray-600 text-gray-600 hover:bg-gray-50",
-      };
-      return `${baseClasses} ${colorMap[link.color || "gray"]}`;
-    }
+  const getVariant = (link: ProjectLink): "gradient" | "outline" | "shine" => {
+    if (link.isPrimary && link.isExternal) return "gradient";
+    if (link.isExternal) return "outline";
+    return "shine";
   };
 
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">関連リンク</h2>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {links.map((link, index) => {
-            const classes = getLinkClasses(link);
+            const variant = getVariant(link);
 
+            // 外部リンク
             if (link.isExternal) {
               return (
-                <a
+                <Button
                   key={index}
                   href={link.href}
-                  className={classes}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.text}
-                </a>
+                  label={link.text}
+                  variant={variant}
+                />
               );
             }
 
+            // 内部リンク
             return (
-              <a key={index} href={link.href} className={classes}>
-                {link.text}
-              </a>
+              <Button
+                key={index}
+                href={link.href}
+                label={link.text}
+                variant={variant}
+              />
             );
           })}
         </div>

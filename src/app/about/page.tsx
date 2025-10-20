@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Button from "@/components/Button";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function About() {
   return (
@@ -9,13 +12,13 @@ export default function About() {
         <div className="text-center my-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">About me</h1>
         </div>
-        <div className="flex bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <div className="md:flex bg-white rounded-2xl shadow-lg p-10 mb-12">
           <Image
             src="/face.png"
             alt="My face"
             width={80}
             height={80}
-            className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
+            className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6 mb-4 md:mb-0"
           />
           <div>
             <p className="text-sm leading-7">
@@ -127,16 +130,16 @@ export default function About() {
       {/* Project Section */}
       <section className="pb-16">
         <div className="flex justify-center gap-4">
-          <Link
+          <Button
             href="/projects"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base"
-          >
-            ☞ プロジェクトを見る
-          </Link>
+            label="☞ プロジェクトを見る"
+            variant="gradient"
+          />
         </div>
       </section>
 
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import { ProjectsType } from "@/type/projectsType";
 import Image from "next/image";
-import Link from "next/link";
+import Button from "./Button";
 
 export default function ProjectCard({
   id,
@@ -39,10 +39,10 @@ export default function ProjectCard({
             className="h-20 w-20 object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="md:w-2/3 p-10 flex flex-col justify-between">
+        <div className="md:w-2/3 p-6 md:p-10 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300">
+              <h3 className="w-[80%] text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300">
                 {title}
               </h3>
               {status && (
@@ -75,12 +75,11 @@ export default function ProjectCard({
             </div>
           </div>
           <div>
-            <Link
+            <Button
               href={`/projects/${id}`}
-              className="inline-block bg-[#2C5D47] text-white px-6 py-2 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-sm"
-            >
-              詳細を見る →
-            </Link>
+              label="☞ 詳細を見る"
+              variant="gradient"
+            />
           </div>
         </div>
       </div>

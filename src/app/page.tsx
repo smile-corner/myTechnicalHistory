@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import ProjectCardForHome from "@/components/ProjectCardForHome";
+import Button from "@/components/Button";
 
 const MotionImage = motion(Image);
 const heroImageFadeUp: Variants = {
@@ -47,25 +47,21 @@ export default function Home() {
         />
         <div className="relative z-10 text-center px-4 py-24">
           <h1 className="text-4xl font-bold text-gray-900 mb-6 drop-shadow-lg">
-            Eco Data Studio - 環境 × IT
+            Eco Data Studio <br /> - 環境 × IT -
           </h1>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto drop-shadow">
             環境×ITを目指すエンジニアの小さな実験と記録。
             <br />
             試作・実装・考察をまとめた技術の備忘録。
           </p>
-          <Link
-            href="#projects"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4 mr-4"
-          >
-            ☞ プロジェクトを見る
-          </Link>
-          <Link
-            href="/about"
-            className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
-          >
-            ☞ 自己紹介を見る
-          </Link>
+          <div className="flex gap-6">
+            <Button
+              href="/projects"
+              label="☞ プロジェクトを見る"
+              variant="gradient"
+            />
+            <Button href="/about" label="☞ 自己紹介を見る" variant="gradient" />
+          </div>
         </div>
       </section>
 
@@ -75,7 +71,7 @@ export default function Home() {
           プロジェクト
         </h2>
 
-        <div className="flex flex-wrap gap-6 w-[80%] mx-auto">
+        <div className="flex flex-wrap gap-6 w-[90%] md:w-[80%] mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
@@ -84,7 +80,7 @@ export default function Home() {
               whileInView="visible"
               custom={i}
               viewport={{ once: true }}
-              className="w-[31%]"
+              className="md:w-[31%]"
             >
               <ProjectCardForHome {...project} />
             </motion.div>
@@ -98,28 +94,27 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             About me
           </h2>
-          <div className="flex bg-white rounded-2xl shadow-lg p-10 mb-12">
+          <div className="md:flex bg-white rounded-2xl shadow-lg p-10 mb-12">
             <Image
               src="/face.png"
               alt="My face"
               width={80}
               height={80}
-              className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
+              className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6 mb-6 md:mb-0"
             />
             <div>
-              <p className="text-sm leading-7">
+              <p className="text-sm leading-7 mb-6">
                 オーストラリア在住の日本人Web開発者です。
                 <br />
                 「環境 ×
                 IT」というテーマを軸に、データ分析やWebアプリ開発を通じて、
                 社会に役立つプロダクトを生み出すことを目指しています。
               </p>
-              <Link
+              <Button
                 href="/about"
-                className="inline-block bg-[#2C5D47] text-white px-6 py-3 rounded-lg shadow hover:bg-green-800 transition-colors duration-200 font-medium text-base inline-block mt-4"
-              >
-                ☞ 自己紹介を見る
-              </Link>
+                label="☞ 自己紹介を見る"
+                variant="gradient"
+              />
             </div>
           </div>
         </div>
