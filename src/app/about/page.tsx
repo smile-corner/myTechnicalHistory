@@ -9,13 +9,13 @@ export default function About() {
         <div className="text-center my-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">About me</h1>
         </div>
-        <div className="flex bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <div className="md:flex bg-white rounded-2xl shadow-lg p-10 mb-12">
           <Image
             src="/face.png"
             alt="My face"
             width={80}
             height={80}
-            className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6"
+            className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6 mb-4 md:mb-0"
           />
           <div>
             <p className="text-sm leading-7">

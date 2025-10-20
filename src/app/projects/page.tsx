@@ -32,7 +32,7 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <section className="py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-8 w-[90%] md:w-full">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}

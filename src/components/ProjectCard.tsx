@@ -39,10 +39,10 @@ export default function ProjectCard({
             className="h-20 w-20 object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="md:w-2/3 p-10 flex flex-col justify-between">
+        <div className="md:w-2/3 p-6 md:p-10 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300">
+              <h3 className="w-[80%] text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300">
                 {title}
               </h3>
               {status && (

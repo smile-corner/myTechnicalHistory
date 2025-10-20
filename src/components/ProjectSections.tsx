@@ -257,36 +257,11 @@ export function ProjectLinks({ links }: ProjectLinksProps) {
     return "shine";
   };
 
-  // const getLinkClasses = (link: ProjectLink) => {
-  //   const baseClasses = "px-6 py-3 rounded-lg transition-colors";
-
-  //   if (link.isPrimary) {
-  //     const colorMap: { [key: string]: string } = {
-  //       green: "bg-green-600 text-white hover:bg-green-700",
-  //       blue: "bg-blue-600 text-white hover:bg-blue-700",
-  //       orange: "bg-orange-600 text-white hover:bg-orange-700",
-  //       purple: "bg-purple-600 text-white hover:bg-purple-700",
-  //       red: "bg-red-600 text-white hover:bg-red-700",
-  //     };
-  //     return `${baseClasses} ${colorMap[link.color || "blue"]}`;
-  //   } else {
-  //     const colorMap: { [key: string]: string } = {
-  //       green: "border border-green-600 text-green-600 hover:bg-green-50",
-  //       blue: "border border-blue-600 text-blue-600 hover:bg-blue-50",
-  //       orange: "border border-orange-600 text-orange-600 hover:bg-orange-50",
-  //       purple: "border border-purple-600 text-purple-600 hover:bg-purple-50",
-  //       red: "border border-red-600 text-red-600 hover:bg-red-50",
-  //       gray: "border border-gray-600 text-gray-600 hover:bg-gray-50",
-  //     };
-  //     return `${baseClasses} ${colorMap[link.color || "gray"]}`;
-  //   }
-  // };
-
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">関連リンク</h2>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {links.map((link, index) => {
             const variant = getVariant(link);
 
