@@ -1,6 +1,9 @@
+"use client";
+
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Button from "@/components/Button";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function About() {
   return (
@@ -136,6 +139,7 @@ export default function About() {
       </section>
 
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }

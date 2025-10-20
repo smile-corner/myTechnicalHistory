@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
 import { motion } from "framer-motion";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -91,6 +92,8 @@ export default function Projects() {
       </section>
 
       <Footer />
+
+      <ScrollToTopButton />
     </main>
   );
 }
