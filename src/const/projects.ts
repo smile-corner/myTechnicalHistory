@@ -109,4 +109,17 @@ export const projects: ProjectsType[] = [
     bgColor: "bg-blue-100",
     github: "https://github.com/miyo-naka/Use_It_or_Lose_It",
   },
+
+  {
+    id: "mybooknote",
+    title: "MyBooknote",
+    description: "自分自身の読書記録をカードで一覧表示するためのWebサイト",
+    technologies: ["Astro 5", "TypeScript", "Tailwind CSS", "papaparse 5"],
+    category: "学習",
+    image: { src: "/projects/mybooknote.png", alt: "mybooknote" },
+    status: "完了",
+    linkColor: "text-blue-600 hover:text-blue-800",
+    bgColor: "bg-blue-100",
+    github: "https://github.com/smile-corner/MyBooknote",
+  },
 ];
