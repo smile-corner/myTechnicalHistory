@@ -70,12 +70,6 @@ export const myBooknoteData: ProjectPageData = {
   ],
   links: [
     {
-      href: "https://github.com/smile-corner/co2-calculator",
-      text: "GitHub",
-      color: "blue",
-      isExternal: true,
-    },
-    {
       href: "/projects",
       text: "他のプロジェクトを見る",
       color: "gray",

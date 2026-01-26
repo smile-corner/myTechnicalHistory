@@ -9,4 +9,5 @@ export interface ProjectsType {
   linkColor?: string;
   bgColor?: string;
   github?: string;
+  isHome?: boolean;
 }

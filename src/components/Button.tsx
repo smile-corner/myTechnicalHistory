@@ -10,6 +10,7 @@ type ButtonProps = {
   children?: ReactNode;
   variant?: "gradient" | "outline" | "shine";
   className?: string;
+  isExternal?: boolean;
 };
 
 export default function Button({
@@ -19,6 +20,7 @@ export default function Button({
   children,
   variant = "gradient",
   className = "",
+  isExternal = false,
 }: ButtonProps) {
   const baseStyle =
     "relative inline-block px-6 py-3 rounded-lg font-medium text-base overflow-hidden transition-all duration-300 ease-out isolate group/button";
@@ -67,6 +69,18 @@ export default function Button({
   } ${className}`;
 
   if (href) {
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          className={commonClasses}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ButtonInner />
+        </a>
+      );
+    }
     return (
       <Link href={href} className={commonClasses}>
         <ButtonInner />
