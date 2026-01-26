@@ -105,17 +105,12 @@ export const familyFinanceDashboardData: ProjectPageData = {
   links: [
     {
       href: "https://family-finance-dashboard.vercel.app/",
-      text: "デモを見る",
+      text: "デモを見る (demo@example.com, demo12345でログイン可能)",
       isPrimary: true,
       color: "blue",
       isExternal: true,
     },
-    {
-      href: "https://github.com/smile-corner/family_finance_dashboard",
-      text: "GitHub",
-      color: "blue",
-      isExternal: true,
-    },
+
     {
       href: "/projects",
       text: "他のプロジェクトを見る",

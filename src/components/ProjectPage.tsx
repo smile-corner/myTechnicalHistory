@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FallbackImage from "@/components/FallbackImage";
 import Link from "next/link";
 import { ProjectPageData } from "../type/projectPageType";
 import {
@@ -34,11 +34,12 @@ export default function ProjectPage({ data }: ProjectPageProps) {
 
           <div className="text-center">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <Image
+              <FallbackImage
                 src={data.iconSrc}
                 alt={data.iconAlt}
                 width={50}
                 height={50}
+                loading="lazy"
               />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-6">

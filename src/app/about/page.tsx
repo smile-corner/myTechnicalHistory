@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import FallbackImage from "@/components/FallbackImage";
 import Button from "@/components/Button";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
@@ -13,16 +13,17 @@ export default function About() {
           <h1 className="text-3xl font-bold text-gray-900 mb-6">About me</h1>
         </div>
         <div className="md:flex bg-white rounded-2xl shadow-lg p-10 mb-12">
-          <Image
+          <FallbackImage
             src="/face.png"
             alt="My face"
             width={80}
             height={80}
+            loading="lazy"
             className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6 mb-4 md:mb-0"
           />
           <div>
             <p className="text-sm leading-7">
-              オーストラリア在住の日本人Web開発者です。
+              オーストラリア在住➡日本在住のWeb開発者です。
               <br />
               電気系エンジニアとしてのキャリアから始まり、建設コンサルにて環境調査、ICT関連業務を経て、現在はWeb開発に軸足を移しています。
               <br />

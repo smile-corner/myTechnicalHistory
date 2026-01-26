@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const menuItems = [
     { href: "/", text: "Home" },
@@ -29,7 +31,10 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium"
+                className={`text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium ${
+                  pathname === item.href ? "text-[#2C5D47]" : ""
+                }`}
+                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {item.text}
               </Link>
@@ -75,7 +80,10 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium"
+                className={`block text-gray-600 hover:text-[#2C5D47] transition-colors duration-200 font-medium ${
+                  pathname === item.href ? "text-[#2C5D47]" : ""
+                }`}
+                aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.text}

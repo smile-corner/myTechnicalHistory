@@ -2,12 +2,12 @@
 
 import Footer from "@/components/Footer";
 import { projects } from "@/const/projects";
+import FallbackImage from "@/components/FallbackImage";
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
-import ProjectCardForHome from "@/components/ProjectCardForHome";
+import ProjectCard from "@/components/ProjectCard";
 import Button from "@/components/Button";
 
-const MotionImage = motion(Image);
+const MotionImage = motion(FallbackImage);
 const heroImageFadeUp: Variants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
   visible: {
@@ -40,6 +40,7 @@ export default function Home() {
           alt="Background Image"
           width={1920}
           height={1080}
+          priority
           variants={heroImageFadeUp}
           initial="hidden"
           animate="visible"
@@ -82,7 +83,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="md:w-[31%]"
             >
-              <ProjectCardForHome {...project} />
+              <ProjectCard {...project} isHome={true} />
             </motion.div>
           ))}
         </div>
@@ -95,16 +96,17 @@ export default function Home() {
             About me
           </h2>
           <div className="md:flex bg-white rounded-2xl shadow-lg p-10 mb-12">
-            <Image
+            <FallbackImage
               src="/face.png"
               alt="My face"
               width={80}
               height={80}
+              loading="lazy"
               className="h-24 w-24 object-contain rounded-xl shadow-sm mr-6 mb-6 md:mb-0"
             />
             <div>
               <p className="text-sm leading-7 mb-6">
-                オーストラリア在住の日本人Web開発者です。
+                オーストラリア在住➡日本在住のWeb開発者です。
                 <br />
                 「環境 ×
                 IT」というテーマを軸に、データ分析やWebアプリ開発を通じて、

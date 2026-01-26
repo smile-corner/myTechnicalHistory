@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FallbackImage from "next/image";
 import {
   Technology,
   Feature,
@@ -66,12 +66,13 @@ export function ProjectOverview({
                 {images.map((image, index) => (
                   <div key={index} className="text-center">
                     <div className="bg-gray-100 rounded-lg p-4 mb-2">
-                      <Image
+                      <FallbackImage
                         src={image.src}
                         alt={image.alt}
                         width={400}
                         height={300}
                         className="rounded-lg shadow-md mx-auto"
+                        loading="lazy"
                       />
                     </div>
                     {image.caption && (

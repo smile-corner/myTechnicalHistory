@@ -1,5 +1,5 @@
 import { ProjectsType } from "@/type/projectsType";
-import Image from "next/image";
+import FallbackImage from "./FallbackImage";
 import Button from "./Button";
 
 export default function ProjectCard({
@@ -11,6 +11,7 @@ export default function ProjectCard({
   image,
   status,
   bgColor = "bg-green-50",
+  isHome = false,
 }: ProjectsType) {
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -25,26 +26,28 @@ export default function ProjectCard({
     }
   };
 
+  const cardClasses = `bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100 ${isHome ? "" : ""}`;
+  const imageWrapperClasses = `${isHome ? bgColor + " flex items-center justify-center p-10" : "md:w-1/3 " + bgColor + " flex items-center justify-center p-10"}`;
+  const contentWrapperClasses = `${isHome ? "p-10 flex flex-col justify-between" : "md:w-2/3 p-6 md:p-10 flex flex-col justify-between"}`;
+  const titleClasses = `text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300 ${isHome ? "w-full" : "w-[80%]"}`;
+
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
-      <div className="md:flex">
-        <div
-          className={`md:w-1/3 ${bgColor} flex items-center justify-center p-10`}
-        >
-          <Image
+    <div className={cardClasses}>
+      <div className={`${isHome ? "" : "md:flex"}`}>
+        <div className={imageWrapperClasses}>
+          <FallbackImage
             src={image.src}
             alt={image.alt}
             width={80}
             height={80}
             className="h-20 w-20 object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
           />
         </div>
-        <div className="md:w-2/3 p-6 md:p-10 flex flex-col justify-between">
+        <div className={contentWrapperClasses}>
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="w-[80%] text-2xl font-bold text-gray-900 group-hover:text-[#2C5D47] transition-colors duration-300">
-                {title}
-              </h3>
+              <h3 className={titleClasses}>{title}</h3>
               {status && (
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
